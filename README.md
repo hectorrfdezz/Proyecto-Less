@@ -21,37 +21,6 @@ pantalla.
 
 ## Estructura del proyecto
 
-```
-ProyectoLess/
-├── contacto.html        # Página de contacto
-├── info.html            # Página de información/servicios
-├── index.html           # Página de inicio
-├── less/                # Carpeta con todos los archivos .less
-│   ├── abstracts/       # Variables, mixins y funciones
-│   │   ├── functions.less
-│   │   ├── mixins.less
-│   │   └── variables.less
-│   ├── base/            # Estilos base (reset, tipografía)
-│   │   ├── reset.less
-│   │   └── typography.less
-│   ├── components/      # Componentes reutilizables (botones, etc.)
-│   │   └── buttons.less
-│   ├── layout/          # Estructura general: header, footer, navbar, etc.
-│   │   ├── body-layout.less
-│   │   ├── div-wrapper.less
-│   │   ├── footer.less
-│   │   ├── header.less
-│   │   └── navbar.less
-│   ├── pages/           # Estilos específicos por página
-│   │   ├── contact.less
-│   │   ├── home.less
-│   │   └── info.less
-│   └── main.less        # Fichero que importa todos los parciales
-├── css/                 # Carpeta donde se generará main.css (vacía por defecto)
-├── public/              # Recursos (imágenes, vídeos)
-└── README.md            # Este archivo
-```
-
 El archivo `main.less` importa todos los parciales mencionados arriba.
 Al compilarlo se generará `css/main.css`, que es el fichero que se enlaza
 desde los HTML. Durante el desarrollo puedes utilizar el compilador de
@@ -71,14 +40,20 @@ en las páginas) o generar el CSS de forma offline.
 
 ## Contenido principal
 
-- **Variables globales** para colores, tipografía y espaciado (`less/abstracts/variables.less`).
-- **Mixins reutilizables** para centrar contenido, layouts de grid, botones,
+-**Variables globales** para colores, tipografía y espaciado (`less/abstracts/variables.less`).
+-**Mixins reutilizables** para centrar contenido, layouts de grid, botones,
   contenedores de vídeo, etc. (`less/abstracts/mixins.less`).
-- **Anidamiento** para mantener un CSS limpio y jerárquico.
-- **Footer fijo** en la parte inferior de la página.
-- **Diseño adaptable** gracias al uso de unidades relativas y flexbox/grid.
+-**Anidamiento** para mantener un CSS limpio y jerárquico.
+-**Footer fijo** en la parte inferior de la página.
+-**Diseño adaptable** gracias al uso de unidades relativas y flexbox/grid.
 
-## Créditos
 
-Proyecto realizado por Héctor y Esteban, adaptado a Less para
-esta entrega.
+## Integrante del grupo:
+
+Tomás García Chaves
+
+Hugo Gil Bailón
+
+Adulis Esteban López Tirado
+
+Hector Ramos Fernández
