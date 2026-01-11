@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto</title>
+  <!-- Cargamos estilos de Less en tiempo real. Compila a CSS para producción -->
+  <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js"></script>
+</head>
+
+<body class="body-layout contact-page">
+  <header>
+    <div class="nav">
+      <h1>Proyecto LESS</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="info.html">Información</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-form-container">
+      <h2>Contacto</h2>
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje..." rows="6" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="nav">
+      <p>© 2026 Desarrollado por Héctor y Esteban. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

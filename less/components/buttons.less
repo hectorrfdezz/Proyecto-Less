@@ -1,0 +1,14 @@
+@import "../abstracts/variables.less";
+
+.button {
+  padding: @spacing;
+  background: @primary-color;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    // Oscurecemos ligeramente el color principal (10%)
+    background: darken(@primary-color, 10%);
+  }
+}

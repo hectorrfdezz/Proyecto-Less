@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Proyecto LESS - Inicio</title>
+  <!--
+    Cargamos el CSS compilado desde Less. Si usas una herramienta como
+    lessc o una extensión de VS Code, compila less/main.less a css/main.css
+    y actualiza este enlace a "css/main.css". Para permitir una vista
+    inmediata sin compilar, incluimos el cargador de Less en el navegador.
+  -->
+  <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js"></script>
+  <!-- Fuentes opcionales -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@500;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <h1>Proyecto LESS</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="info.html">Información</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+  <!-- Vídeo de fondo -->
+  <!-- Utilizamos el vídeo original desde GitHub; si no se carga, se mostrará el fondo negro -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://raw.githubusercontent.com/tomasgarc/ProyectoSass/main/public/noche.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+  <div class="div-video">
+    <div class="mid-panel">
+      <h2>Nueva York</h2>
+      <a href="info.html" class="modern-button">Saber más</a>
+    </div>
+  </div>
+</body>
+
+</html>

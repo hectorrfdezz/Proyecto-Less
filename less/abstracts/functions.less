@@ -1,0 +1,8 @@
+// Funciones personalizadas
+
+// Conversión a rem: divide píxeles entre 16. Uso: .rem(32);
+.rem(@px) {
+  @rem-value: (@px / 16rem);
+  // Para utilizar este valor en otras declaraciones, asigna la variable
+  // por ejemplo: width: @rem-value;
+}

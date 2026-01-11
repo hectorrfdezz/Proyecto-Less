@@ -1,0 +1,95 @@
+@import "../abstracts/variables.less";
+@import "../abstracts/mixins.less";
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  align-items: center;
+  padding: 48px;
+}
+
+.card {
+  position: relative; // Para que el overlay (::after) se posicione sobre la card
+  height: 560px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slide-down 0.9s ease-out;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.08);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+  }
+
+  .card-content {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    z-index: 1;
+    color: #f5f5f5;
+    transition: transform 0.4s ease;
+
+    h3 {
+      .def-title();
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: inline-block; // Ocupa el ancho del texto
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+  }
+
+  &:hover .card-content {
+    transform: translateY(-6px);
+  }
+}
+
+.info-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("/public/central.jpg") center/cover no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
